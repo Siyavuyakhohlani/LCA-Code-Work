@@ -1,0 +1,130 @@
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 20xp;
+    padding: 10px;
+    background-color: #333;
+    justify-content: end;
+}
+.navbar {
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 10;
+}
+.navbar a{
+    color: white;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.3s;
+    margin: 5px;
+}
+
+.product-card:hover{
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px;
+}
+.navbar a::after{
+    content: "";
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width 0.3s;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+}
+
+.navbar a:hover::after {
+    width: 100%;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    color: #fff;
+    background: linear-gradient(-45deg, #ff6b6b, #ffd93b, #6bcdfd, #9b59b6);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+    0%{ background-position: 0% 50%;}
+    50%{ background-position: 100% 50%;}
+    100%{ background-position: 0% 50%;}
+}
+
+#products {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center;
+}
+.product-card {
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+}
+.product-card:hover {
+    transform: scale(1.0s);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+p{
+    font-weight: lighter;
+    font-style: italic;
+}
+
+
+h2 {
+    margin-left: 500px;
+
+}
+.loading-spinner{
+    display: flow-root;
+    border: 8px solid lightblue;
+    border-top: 8px solid grey;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite, fadeOut 6s linear forwards; /* Added fadeOut */
+    position: fixed;
+    top: 20%;
+    left: 48%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+@keyframes slideIn {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes pulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+}
+@keyframes fadeOut {
+    0% { opacity: 1; }
+    100% { opacity: 0; }
+}
