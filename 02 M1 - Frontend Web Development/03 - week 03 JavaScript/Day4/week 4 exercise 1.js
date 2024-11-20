@@ -47,6 +47,12 @@ console.log(countVowels('Siyavuya'));
 // numbers
 
 function isPrime(number){
-    return number%2 ===1;
+    if (number<= 1) return false;
+    for (let i= 2; i <= Math.sqrt(number); i++){
+        if(number%i===0){
+            return false;
+        }
+    }
+    return true;
 }
-console.log(isPrime(4));
+console.log(isPrime(1));
