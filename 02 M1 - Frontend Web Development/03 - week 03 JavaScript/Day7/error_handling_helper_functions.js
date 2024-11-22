@@ -96,3 +96,4 @@ console.log(findAverage(numbers));
 console.log(removeDuplicate(numbers));
 console.log(getsum(numbers));
 
+
