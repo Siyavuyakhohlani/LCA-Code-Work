@@ -89,8 +89,10 @@ function removeDuplicate(arr){
     return [...new Set(arr)];
 }
 
-
-console.log(findMax([1, 5,4,7,14]));
-console.log(findAverage([1,2,3,4,5,6]));
-console.log(removeDuplicate([1,2,2,3,4,3]));
+let numbers =[1, 2, 2, 3, 4, 5, 6]
+console.log(findMax(numbers));
+console.log(findMin(numbers));
+console.log(findAverage(numbers));
+console.log(removeDuplicate(numbers));
+console.log(getsum(numbers));
 
